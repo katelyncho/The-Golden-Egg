@@ -7,23 +7,23 @@ import "./App.css"
 const POPUP_CONTENT = {
   web: {
     title: "Outer Shell",
-    text: "This is the protective outer layer of the Golden Egg."
+    text: "Morse code for the website URL 'katelyncho.github.io/The-Golden-Egg/'"
   },
   spring: {
     title: "Spring",
-    text: "The bright center of the egg, symbolizing creativity and ideas."
+    text: "We shall remember our roots; either cultural, generic, personal, or whawtever it may be. We always need a 'home' to stay and come back"
   },
   summer: {
     title: "Summer",
-    text: "Layer 1 represents the first stage of exploration."
+    text: "Human beings are greedy and egotistical. I hate myself because I know I am like that too"
   },
   fall: {
     title: "Fall",
-    text: "Layer 2 goes deeper into the Golden Egg’s structure."
+    text: "Humanity is ephemeral, but also so beautiful because it's like a spark of light"
   },
   winter: {
     title: "Winter",
-    text: "Layer 2 goes deeper into the Golden Egg’s structure."
+    text: "I have such a big love-hate relationship with humanity. Humans are so disgusting yet so beautiful. I wonder how the next intelligent beings would be like. would they become like us, or different?"
   }
 }
 
