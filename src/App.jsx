@@ -77,7 +77,7 @@ function HoverableObject({ object, onClick }) {
 }
 
 function GoldenEgg({ onObjectClick }) {
-  const gltf = useLoader(GLTFLoader, "/GoldenEgg.glb")
+  const gltf = useLoader(GLTFLoader, "models/GoldenEgg.glb")
   const eggRef = useRef()
 
 // object rotation
@@ -92,7 +92,7 @@ function GoldenEgg({ onObjectClick }) {
       {gltf.scene.children.map((child, index) => {
       const name = child.name?.toLowerCase()
 
-      // setting ball bearings not clickable
+      // excluding ball bearing parts from being clickable
       if (name === "ball_bearing") {
         return (
           <primitive
@@ -140,20 +140,6 @@ function SimpleOrbitControls() {
       camera.rotation.x -= dy * 0.005
       camera.rotation.x = Math.max(-Math.PI / 2, Math.min(Math.PI / 2, camera.rotation.x))
     }
-
-    // const onMouseUp = () => {
-    //   isDragging.current = false
-    // }
-
-    // window.addEventListener("mousedown", onMouseDown)
-    // window.addEventListener("mousemove", onMouseMove)
-    // window.addEventListener("mouseup", onMouseUp)
-
-    // return () => {
-    //   window.removeEventListener("mousedown", onMouseDown)
-    //   window.removeEventListener("mousemove", onMouseMove)
-    //   window.removeEventListener("mouseup", onMouseUp)
-    // }
   }, [camera])
 
   return null
@@ -164,6 +150,7 @@ function App() {
   const [authenticated, setAuthenticated] = useState(false)
   const [password, setPassword] = useState("")
 
+  // password setting
   const CORRECT_PASSWORD = "goldenegg"
 
   const handleSubmit = (e) => {
@@ -215,7 +202,7 @@ function App() {
     )
   }
 
-  // show the main page when password is correct
+  // main page with the 3d object
   return (
     <div style={{ width: "100%", height: "100vh" }}>
       <Canvas style={{ width: "100%", height: "100%" }}>
