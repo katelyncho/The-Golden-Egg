@@ -77,7 +77,7 @@ function HoverableObject({ object, onClick }) {
 }
 
 function GoldenEgg({ onObjectClick }) {
-  const gltf = useLoader(GLTFLoader, "models/GoldenEgg.glb")
+  const gltf = useLoader(GLTFLoader, `${import.meta.env.BASE_URL}GoldenEgg.glb`)
   const eggRef = useRef()
 
 // object rotation
