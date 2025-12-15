@@ -77,7 +77,7 @@ function HoverableObject({ object, onClick }) {
 }
 
 function GoldenEgg({ onObjectClick }) {
-  const gltf = useLoader(GLTFLoader, "./public/GoldenEgg.glb")
+  const gltf = useLoader(GLTFLoader, "/GoldenEgg.glb")
   const eggRef = useRef()
 
 // object rotation
@@ -172,8 +172,8 @@ function App() {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          background: "black",
-          color: "white",
+          background: "rgb(38, 31, 46)",
+          color: "rgba(223, 164, 54, 1)",
         }}
       >
         <form
@@ -184,7 +184,7 @@ function App() {
             gap: "10px",
             padding: "20px",
             borderRadius: "10px",
-            background: "rgba(0, 0, 0, 0.8)",
+            background: "rgb(38, 31, 46)",
           }}
         >
           <label>
@@ -196,7 +196,7 @@ function App() {
               style={{ marginLeft: "8px" }}
             />
           </label>
-          <button type="submit">Enter</button>
+          <button type="submit" style={{ background: "rgba(223, 164, 54, 1)", color: "rgb(38, 31, 46)" }}>Enter</button>
         </form>
       </div>
     )
@@ -214,6 +214,7 @@ function App() {
         <SimpleOrbitControls />
       </Canvas>
 
+ {/* popup window opening when each components are clicked */}
       {selectedObject &&
         (() => {
           const name = selectedObject.name || "Component"
@@ -224,10 +225,10 @@ function App() {
             }
 
           return (
-            <div className="popup">
+            <div className="popup" style={{ background: "rgb(38, 31, 46)", color: "rgba(223, 164, 54, 1)" }}>
               <h2>{info.title}</h2>
               <p>{info.text}</p>
-              <button onClick={() => window.location.reload()}>Close</button>
+              <button style={{ background: "rgba(223, 164, 54, 1)", color: "rgb(38, 31, 46)" }} onClick={() => window.location.reload()}>Close</button>
             </div>
           )
         })()}

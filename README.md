@@ -1,6 +1,8 @@
 # The Second Golden Disk
 ### Core Lab & Core Studio Final Project
 
+*the password for the website is 'goldenegg'
+
 My biggest theme for this project is **‘collective fear of nonexistence’**. For this project, I am planning to create a physical object that contains abstract information about how I want to be portrayed to future intelligent beings. For the website, I will make a documentation that only I can open like a diary.
 
 ## Technical Plan
