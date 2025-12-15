@@ -223,7 +223,7 @@ function App() {
               title: name,
               text: "",
             }
-
+          // page reloaded when close button clicked
           return (
             <div className="popup" style={{ background: "rgb(38, 31, 46)", color: "rgba(223, 164, 54, 1)" }}>
               <h2>{info.title}</h2>
